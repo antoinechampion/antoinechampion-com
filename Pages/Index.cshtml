@@ -1,0 +1,107 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Antoine Champion - Software Engineer";
+}
+
+@section Head
+{
+    <meta property="og:title" content="Antoine Champion" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:image" content="https://@HttpContext.Request.Host/images/logos/social.jpg" />
+    <meta property="og:url" content="https://@HttpContext.Request.Host@HttpContext.Request.Path" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta property="profile:first_name" content="Antoine" />
+    <meta property="profile:last_name" content="Champion" />
+    <meta property="og:site_name" content="Antoine Champion - Software Engineer" />
+}
+
+<!-- Header -->
+<header id="header">
+    <div class="inner">
+        <a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+        <h1><strong>Antoine Champion</strong></h1>
+        <h1>Software Engineer</h1>
+        <h2>Paris, France</h2>
+        <h3><a href="/download/CV_Antoine_Champion.pdf">Download CV</a></h3>
+    </div>
+</header>
+
+<!-- Main -->
+<div id="main">
+    <!-- Two -->
+    <section id="two">
+        <h2>Recent Work</h2>
+        <div class="row">
+            @for (var i = 0; i < Model.WorkItems.Count; i++)
+            {
+                var item = Model.WorkItems[i];
+            <article class="col-4 col-12-xsmall work-item">
+                <a class="image fit thumb" data-bs-toggle="modal" data-bs-target="#modal-@i"><img src="@item.ImageUri" alt="" /></a>
+                <h4>@item.Type</h4>
+                <h3><a class="work-item-title" data-bs-toggle="modal" data-bs-target="#modal-@i">@item.Label</a></h3>
+                <p class="work-item-legend">
+                    @item.Description
+                </p>
+                <div class="modal fade" id="modal-@i" tabindex="-1" aria-labelledby="modal-@i-label" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modal-@i-label">@item.Label</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img class="image-modal" src="@item.ImageUri" alt="@item.ImagePlaceholder" />
+                                <p>
+                                    @item.Description
+                                </p>
+                                @foreach (var link in item.Links)
+                                {
+                                    if (link.Item1 == "embed")
+                                    {
+                                        <div class="embed-content">
+                                            @Html.Raw(link.Item2)
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <a href="@link.Item2">
+                                            @link.Item1
+                                        </a><br/>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            }
+        </div>
+    </section>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <ul class="icons">
+            <li><a href="https://www.linkedin.com/in/championantoine/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/antoinechampion" class="icon brands fa-github"><span class="label">Github</span></a></li>
+            <li><a href="https://medium.com/@@antoine.champion" class="icon brands fa-medium"><span class="label">Medium</span></a></li>
+            <li><a href="mailto:contact@antoinechampion.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>Theme: <a href="https://html5up.net">HTML5 UP</a>, Images: <a href="https://unsplash.com">Unsplash</a></li>
+        </ul>
+    </div>
+</footer>
+
+@section Scripts {
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+}

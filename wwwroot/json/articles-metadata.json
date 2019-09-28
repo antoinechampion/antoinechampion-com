@@ -1,0 +1,52 @@
+{
+  "1": {
+    "Title": "Computer vision for industrial applications",
+    "Description": "How the big industry is trying to cope with IA and big data: collaborative robots, smart structures and industry 4.0",
+    "Path": "markdown/industry.md",
+    "PublicationDate": "Aug. 31th 2019",
+    "MediumUri": null,
+    "GithubUri": null,
+    "ArxivUri": null,
+    "AnyUri": false
+  },
+  "2": {
+    "Title": "Generating metamorphic programs using Machine Learning",
+    "Description": "A state-of-the-art approach looking to produce highly metamorphic programs using recurrent neural networks",
+    "Path": "markdown/deepmm.md",
+    "PublicationDate": "Oct. 6th 2019",
+    "MediumUri": null,
+    "GithubUri": "https://github.com/antoinechampion/DeepMetaMorph",
+    "ArxivUri": null,
+    "AnyUri": false
+  },
+  "3": {
+    "Title": "Detecting COVID-19 with 97% accuracy: beware of the AI hype!",
+    "Description": "A recent post which claims to detect COVID-19 using a deep neural network with a very high accuracy gains keen mediatic interest",
+    "Path": "markdown/covid.md",
+    "PublicationDate": "Mar. 23th 2020",
+    "MediumUri": "https://medium.com/p/9074248af3e1",
+    "GithubUri": null,
+    "ArxivUri": null,
+    "AnyUri": false
+  },
+  "4": {
+    "Title": "An introduction to Constraint Solvers",
+    "Description": "This post will provide a quick grasp at constraint satisfaction, a powerful yet underused  approach which can tackle a large number of problems in AI and other areas of computer science, from logistics and scheduling to temporal reasoning and graph problems.",
+    "Path": "markdown/csp.md",
+    "PublicationDate": "Apr. 1st 2020",
+    "MediumUri": "https://towardsdatascience.com/where-you-should-drop-deep-learning-in-favor-of-constraint-solvers-eaab9f11ef45",
+    "GithubUri": "https://colab.research.google.com/drive/1vFkt5yIQtyelqvCh2TsJ9UDeM5miXqui",
+    "ArxivUri": null,
+    "AnyUri": false
+  },
+  "5": {
+    "Title": "Statistical decision theory for predictive models",
+    "Description": "The quiet statisticians have changed our world; not by discovering new facts or technical developments, but by changing the ways that we reason, experiment and form our opinions.",
+    "Path": "markdown/predictive-stats.md",
+    "PublicationDate": "Apr. 10th 2020",
+    "MediumUri": null,
+    "GithubUri": null,
+    "ArxivUri": null,
+    "AnyUri": false
+  }
+}

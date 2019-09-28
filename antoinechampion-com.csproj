@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\static\**" />
+    <Content Remove="Pages\static\**" />
+    <EmbeddedResource Remove="Pages\static\**" />
+    <None Remove="Pages\static\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="sitemap.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\css\fontawesome-all.min.css" />
+    <None Include="wwwroot\images\avatar.jpg" />
+    <None Include="wwwroot\images\bg.jpg" />
+    <None Include="wwwroot\css\libs\_breakpoints.scss" />
+    <None Include="wwwroot\css\libs\_functions.scss" />
+    <None Include="wwwroot\css\libs\_html-grid.scss" />
+    <None Include="wwwroot\css\libs\_mixins.scss" />
+    <None Include="wwwroot\css\libs\_vars.scss" />
+    <None Include="wwwroot\css\libs\_vendor.scss" />
+    <None Include="wwwroot\css\main.scss" />
+    <None Include="wwwroot\images\overlay.png" />
+    <None Include="wwwroot\js\breakpoints.min.js" />
+    <None Include="wwwroot\js\browser.min.js" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\jquery.poptrox.min.js" />
+    <None Include="wwwroot\js\main.js" />
+    <None Include="wwwroot\js\util.js" />
+    <None Include="wwwroot\webfonts\fa-brands-400.eot" />
+    <None Include="wwwroot\webfonts\fa-brands-400.svg" />
+    <None Include="wwwroot\webfonts\fa-brands-400.ttf" />
+    <None Include="wwwroot\webfonts\fa-brands-400.woff" />
+    <None Include="wwwroot\webfonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-regular-400.eot" />
+    <None Include="wwwroot\webfonts\fa-regular-400.svg" />
+    <None Include="wwwroot\webfonts\fa-regular-400.ttf" />
+    <None Include="wwwroot\webfonts\fa-regular-400.woff" />
+    <None Include="wwwroot\webfonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\webfonts\fa-solid-900.eot" />
+    <None Include="wwwroot\webfonts\fa-solid-900.svg" />
+    <None Include="wwwroot\webfonts\fa-solid-900.ttf" />
+    <None Include="wwwroot\webfonts\fa-solid-900.woff" />
+    <None Include="wwwroot\webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\download\" />
+  </ItemGroup>
+
+</Project>
