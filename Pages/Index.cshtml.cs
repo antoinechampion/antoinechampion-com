@@ -27,9 +27,20 @@ namespace antoinechampion_com.Pages
             {
                 new WorkItem
                 {
+                    Label = "How to generate procedural music using code",
+                    Type = "Article",
+                    Description = "Creating a synthesizer that plays Tetris theme in 70 lines of C code.",
+                    Links = {
+                        ("Read on Medium", "https://medium.com/@antoine.champion/how-to-generate-music-using-code-c0413909f02") ,
+                    },
+                    ImageUri = "/images/thumbs/tetris-music.jpg",
+                    ImagePlaceholder = "Music composer behind a computer"
+                },
+                new WorkItem
+                {
                     Label = "Stockfish: Technical overview of a Chess Engine",
                     Type = "Article",
-                    Description = "Stockfish, one of the best modern chess engines, is orders of magnitude stronger than DeepBlue",
+                    Description = "Stockfish, one of the best modern chess engines, is orders of magnitude stronger than DeepBlue.",
                     Links = {
                         ("Part 1: Generating candidate moves", "https://towardsdatascience.com/dissecting-stockfish-part-1-in-depth-look-at-a-chess-engine-7fddd1d83579") ,
                         ("Part 2: Evaluating a position", "https://towardsdatascience.com/dissecting-stockfish-part-2-in-depth-look-at-a-chess-engine-2643cdc35c9a") ,
