@@ -35,5 +35,5 @@ jobs:
       with:
         kubeconfig: ${{ secrets.KUBE_CONFIG }}
         args: |
-          delete pods -l app=antoinechampion-com 
+          rollout restart deploy antoinechampion-com 
           

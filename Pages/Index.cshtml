@@ -37,45 +37,49 @@
             @for (var i = 0; i < Model.WorkItems.Count; i++)
             {
                 var item = Model.WorkItems[i];
-            <article class="col-4 col-12-xsmall work-item">
-                <a class="image fit thumb" data-bs-toggle="modal" data-bs-target="#modal-@i"><img src="@item.ImageUri" alt="" /></a>
-                <h4>@item.Type</h4>
-                <h3><a class="work-item-title" data-bs-toggle="modal" data-bs-target="#modal-@i">@item.Label</a></h3>
-                <p class="work-item-legend">
-                    @item.Description
-                </p>
-                <div class="modal fade" id="modal-@i" tabindex="-1" aria-labelledby="modal-@i-label" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="modal-@i-label">@item.Label</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="image-modal" src="@item.ImageUri" alt="@item.ImagePlaceholder" />
-                                <p>
-                                    @item.Description
-                                </p>
-                                @foreach (var link in item.Links)
-                                {
-                                    if (link.Item1 == "embed")
+                <article class="col-4 col-12-xsmall work-item">
+                    <a class="image fit thumb" data-bs-toggle="modal" data-bs-target="#modal-@i"><img src="@item.ImageUri" alt=""/></a>
+                    
+                    <h4>@item.Type</h4>
+                    <h3><a class="work-item-title" data-bs-toggle="modal" data-bs-target="#modal-@i">@item.Label</a></h3>
+                    <p class="work-item-legend">
+                        @item.Description
+                    </p>
+                    <div class="modal fade" id="modal-@i" tabindex="-1" aria-labelledby="modal-@i-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-@i-label">@item.Label</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    @if (item.DisplayImageInPopup)
                                     {
-                                        <div class="embed-content">
-                                            @Html.Raw(link.Item2)
-                                        </div>
+                                        <img class="image-modal" src="@item.ImageUri" alt="@item.ImagePlaceholder"/>
                                     }
-                                    else
+                                    <p>
+                                        @item.Description
+                                    </p>
+                                    @foreach (var link in item.Links)
                                     {
-                                        <a href="@link.Item2">
-                                            @link.Item1
-                                        </a><br/>
+                                        if (link.Item1 == "embed")
+                                        {
+                                            <div class="embed-content">
+                                                @Html.Raw(link.Item2)
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <a href="@link.Item2">
+                                                @link.Item1
+                                            </a><br/>
+                                        }
                                     }
-                                }
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
             }
         </div>
     </section>

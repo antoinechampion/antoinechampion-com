@@ -15,6 +15,7 @@ namespace antoinechampion_com.Pages
         public List<(string, string)> Links { get; set; } = new List<(string, string)>();
         public string ImageUri { get; set; }
         public string ImagePlaceholder { get; set; }
+        public bool DisplayImageInPopup { get; set; } = true;
     }
 
     public class IndexModel : PageModel
@@ -112,12 +113,14 @@ namespace antoinechampion_com.Pages
                     Type = "Music",
                     Description = "Collection of various musical compositions for classical Piano.",
                     Links = {
+                         ("Aria in B Flat Minor: Download sheet", "/download/1-3_aria_in_b_flat_minor.pdf"),
                          ("Nocturne in G Minor: Download sheet", "/download/1-2_nocturne_en_sol_mineur.pdf"),
                          ("Nocturne in F Minor: Download sheet", "/download/1-1_nocturne_en_fa_mineur.pdf"),
                          ("embed", "<iframe width=\"100%\" height=\"450\" scrolling=\"no\" frameborder=\"no\" allow=\"autoplay\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1301423938&color=%2354b176&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true\"></iframe><div style=\"font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;\"><a href=\"https://soundcloud.com/antoine-champion\" title=\"Antoine Champion\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Antoine Champion</a> · <a href=\"https://soundcloud.com/antoine-champion/sets/antoine-champion-piano\" title=\"Antoine Champion - Piano\" target=\"_blank\" style=\"color: #cccccc; text-decoration: none;\">Antoine Champion - Piano</a></div>"),
                     },
                     ImageUri = "/images/thumbs/piano.jpg",
-                    ImagePlaceholder = "A piano"
+                    ImagePlaceholder = "A piano",
+                    DisplayImageInPopup = false
                 }
 
             };
