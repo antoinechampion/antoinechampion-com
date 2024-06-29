@@ -19,7 +19,7 @@ spec:
         image: rg.fr-par.scw.cloud/achampion/antoinechampion-com:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 5000
           name: http
       imagePullSecrets:
         - name: scaleway-cr
@@ -33,11 +33,7 @@ spec:
   - port: 80
     name: http
     protocol: TCP
-    targetPort: 80
-  - port: 443
-    name: https
-    protocol: TCP
-    targetPort: 443
+    targetPort: 5000
   selector:
     app: antoinechampion-com
 ---
