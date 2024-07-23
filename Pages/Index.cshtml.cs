@@ -45,6 +45,7 @@ namespace antoinechampion_com.Pages
                     Links = {
                         ("Part 1: Generating candidate moves", "https://towardsdatascience.com/dissecting-stockfish-part-1-in-depth-look-at-a-chess-engine-7fddd1d83579") ,
                         ("Part 2: Evaluating a position", "https://towardsdatascience.com/dissecting-stockfish-part-2-in-depth-look-at-a-chess-engine-2643cdc35c9a") ,
+                        ("Part 3: Navigating the moves", "https://towardsdatascience.com/dissecting-stockfish-part-3-in-depth-look-at-a-chess-engine-51b59e532bb4") ,
                     },
                     ImageUri = "/images/thumbs/stockfish.jpg",
                     ImagePlaceholder = "Chess pieces"
