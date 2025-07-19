@@ -1,37 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using System.IO;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace antoinechampion_com.Pages
 {
     [Route("api")]
     public class Api : Controller
     {
-        [HttpGet("mirror/set/{*tags}")]
-        public async Task SetMirror(string tags)
+        [HttpGet("redirect/{permalink}")]
+        public IActionResult RedirectionEndpoint(string permalink)
         {
-            using (var fileStream = new StreamWriter("mirror.txt", false))
+            switch (permalink)
             {
-                await fileStream.WriteAsync(tags);
+                case "mariage":
+                    return Redirect("https://www.example.com/");
+                default:
+                    return NotFound();
             }
-
-        }
-
-        [HttpGet("mirror/get")]
-        public string GetMirror()
-        {
-            var str = "";
-            using (var sr = new StreamReader("mirror.txt"))
-            {
-                str = sr.ReadToEnd();
-            }
-
-            return str;
         }
     }
 }
