@@ -33,7 +33,7 @@ spec:
   - port: 80
     name: http
     protocol: TCP
-    targetPort: 80
+    targetPort: 5000
   selector:
     app: antoinechampion-com
 ---
