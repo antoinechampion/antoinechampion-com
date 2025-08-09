@@ -11,7 +11,7 @@ namespace antoinechampion_com.Pages
             switch (permalink)
             {
                 case "mariage":
-                    return Redirect("https://www.example.com/");
+                    return Redirect("https://achampion-public.s3.fr-par.scw.cloud/Mariage%20Paola%20et%20Antoine.pdf");
                 default:
                     return NotFound();
             }
